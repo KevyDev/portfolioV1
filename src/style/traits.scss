@@ -1,0 +1,21 @@
+@import "colors";
+
+section.traits-container {
+    padding-top: 5.5em;
+    background: $white;
+    border-bottom: 0.1em solid $shadow;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        li {
+            padding: 1em;
+            border-radius: 1em;
+            transition: background .2s ease;
+            border-bottom: 0.1em solid $shadow;
+            &:hover {
+                background: $shadow;
+            }
+        }
+    }
+}

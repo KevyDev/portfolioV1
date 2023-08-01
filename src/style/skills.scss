@@ -1,0 +1,34 @@
+@import "colors";
+
+section.skills-container {
+    background: $white;
+    border-top: 0.1em solid $shadow;
+    border-bottom: 0.1em solid $shadow;
+    ol.skills-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .5em;
+                padding: 1em;
+                border-radius: 1em;
+                transition: background .2s ease;
+                border-bottom: 0.1em solid $shadow;
+                &:hover {
+                    background: $shadow;
+                }
+                img.skill-img {
+                    display: block;
+                    height: 3em;
+                }
+            }
+        }
+    }
+}

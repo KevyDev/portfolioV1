@@ -1,0 +1,80 @@
+@import "colors";
+
+section.section-container {
+    width: 100%;
+    & > div {
+        width: 90%;
+        max-width: 64em;
+        margin: auto;
+        padding: 3em 1em;
+        h1 {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+section.projects-works-container {
+    ol.list {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        gap: 1em;
+        align-items: start;
+        article {
+            background: $white;
+            padding: 2em;
+            border-radius: 1em;
+            width: 100%;
+            border: 0.1em solid $shadow;
+            h5.description {
+                margin-top: .5em;
+                color: $gray;
+            }
+            ul.tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: .5em;
+                margin: 1em 0em;
+                li {
+                    font-size: 1em;
+                    color: $blue;
+                }
+            }
+            ol.links-buttons {
+                display: flex;
+                flex-direction: row;
+                gap: .5em;
+                a {
+                    button {
+                        display: block;
+                        cursor: pointer;
+                        background: none;
+                        svg {
+                            display: block;
+                            fill: $green;
+                            height: 2em;
+                        }
+                        &.github svg {
+                            fill: $black;
+                        }
+                        &.youtube svg {
+                            fill: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 64em) {
+    section.projects-works-container ol.list {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width: 48em) {
+    section.projects-works-container ol.list {
+        grid-template-columns: 100%;
+    }
+}

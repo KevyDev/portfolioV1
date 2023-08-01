@@ -1,0 +1,152 @@
+{
+    "traitsData": {
+        "title": {
+            "en": "Who am I?",
+            "es": "¿Quién soy?"
+        },
+        "list": {
+            "en": [
+                "My name is Kevin Gorrín.",
+                "Fullstack Developer",
+                "Self-taught programmer",
+                "My motto is: simple, modern, functional, scalable and fast.",
+                "Native Spanish speaker",
+                "Non-native English speaker",
+                "Gold medal in Provincial Programming Contest",
+                "Participant in National Programming Contest"
+            ],
+            "es": [
+                "Mi nombre es Kevin Gorrín.",
+                "Desarrollador Fullstack",
+                "Programador autodidacta",
+                "Mi lema es: simple, moderno, funcional, escalable y rápido.",
+                "Hispanohablante nativo",
+                "Angloparlante no nativo",
+                "Medalla de oro en Concurso Provincial de Programación",
+                "Participante en Concurso Nacional de Programación"
+            ]
+        }
+    },
+    "workData": {
+        "title": {
+            "en": "Work experience",
+            "es": "Experiencia laboral"
+        },
+        "list": [
+            {
+                "name": "KevyDev YouTube Channel",
+                "description": {
+                    "en": "I upload videos about programming on my YouTube channel. (2023-)",
+                    "es": "Subo videos sobre programación en mi canal de YouTube. (2023-)"
+                },
+                "ytLink": "https://www.youtube.com/@KevyDev",
+                "tags": [
+                    "Code"
+                ]
+            }
+        ]
+    },
+    "skillsData": {
+        "title": {
+            "en": "Skills",
+            "es": "Habilidades"
+        },
+        "list": [
+            [
+                "HTML",
+                "CSS",
+                "Javascript"
+            ],
+            [
+                "Reactjs",
+                "Nextjs"
+            ],
+            [
+                "Sass"
+            ],
+            [
+                "Nodejs",
+                "Expressjs",
+                "PHP"
+            ],
+            [
+                "Python",
+                "C++"
+            ],
+            [
+                "MongoDB",
+                "MySQL"
+            ],
+            [
+                "Git",
+                "GitHub"
+            ]
+        ]
+    },
+    "projectsData": {
+        "title": {
+            "en": "Projects",
+            "es": "Proyectos"
+        },
+        "list": [
+            {
+                "name": "KevyDev Portfolio V1",
+                "description": {
+                    "en": "I made my own portfolio.",
+                    "es": "Hice mi propio portafolio."
+                },
+                "ghLink": "https://github.com/KevyDev/portfolioV1",
+                "link": "https://kevydev.github.io/portfolio/",
+                "tags": [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "Reactjs",
+                    "Sass",
+                    "Git",
+                    "GitHub"
+                ]
+            },
+            {
+                "name": "OX Game",
+                "description": {
+                    "en": "I made the famous game of tic tac toe.",
+                    "es": "Hice el famoso juego de tres en raya."
+                },
+                "ghLink": "https://github.com/KevyDev/OXGame",
+                "link": "https://kevydev.github.io/OXGame/",
+                "tags": [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "Reactjs",
+                    "Sass",
+                    "Git",
+                    "GitHub"
+                ]
+            },
+            {
+                "name": "MyShoppy V1",
+                "description": {
+                    "en": "I made my first virtual shop using React and a public API (fakestoreapi.com).",
+                    "es": "Hice mi primera tienda virtual usando React y una API pública (fakestoreapi.com)."
+                },
+                "ghLink": "https://github.com/KevyDev/MyShoppyV1",
+                "link": "https://kevydev.github.io/MyShoppyV1/",
+                "tags": [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "Reactjs",
+                    "Sass",
+                    "Git",
+                    "GitHub"
+                ]
+            }
+        ]
+    },
+    "footerText": {
+        "en": "© Made and designed by KevyDev.",
+        "es": "© Hecho y diseñado por KevyDev."
+    }
+}

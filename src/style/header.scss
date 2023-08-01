@@ -1,0 +1,91 @@
+@import "colors";
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $headerBg;
+    backdrop-filter: saturate(180%) blur(5px);
+    transform: translateY(-100%);
+    border-bottom: 0.1em solid $shadow;
+    transition: transform .2s ease;
+    &.on-top {
+        transform: translateY(0);
+    }
+    div.header-container {
+        width: 90%;
+        max-width: 64em;
+        margin: auto;
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        section.logotype-container {
+            height: 3.5em;
+            img {
+                display: block;
+                height: 100%;
+            }
+        }
+        section.menu-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1em;
+            button.social-media-button {
+                display: block;
+                background: none;
+                cursor: pointer;
+                svg {
+                    display: block;
+                    height: 2.5em;
+                }
+                &.github svg {
+                    fill: $black;
+                }
+                &.youtube svg {
+                    fill: $red;
+                }
+            }
+            button.lang-button {
+                width: 2.5em;
+                height: 2.5em;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                background: none;
+                border-radius: 100%;
+                img {
+                    width: 2.5em;
+                    position: absolute;
+                    transition: transform .2s ease;
+                }
+                &.en-selected {
+                    img.en-img {
+                        transform: translate(-50%, -50%);
+                    }
+                    img.es-img {
+                        transform: translate(100%, -50%);
+                    }
+                }
+                &.es-selected {
+                    img.en-img {
+                        transform: translate(-100%, -50%);
+                    }
+                    img.es-img {
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 48em) {
+    header div.header-container section.menu-container button.social-media-button {
+        display: none;
+    }
+}

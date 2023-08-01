@@ -1,0 +1,34 @@
+@import "colors";
+
+footer {
+    padding: 2em;
+    background: $white;
+    border-top: 0.1em solid $shadow;
+    h6 {
+        text-align: center;
+        color: $gray;
+    }
+    section.social-media-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 1em;
+        button {
+            display: block;
+            background: none;
+            cursor: pointer;
+            svg {
+                display: block;
+                height: 2em;
+            }
+            &.github svg {
+                fill: $black;
+            }
+            &.youtube svg {
+                fill: $red;
+            }
+        }
+    }
+}
