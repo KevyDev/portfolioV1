@@ -16,10 +16,10 @@ section.skills-container {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap: .5em;
+                gap: 0.5em;
                 padding: 1em;
                 border-radius: 1em;
-                transition: background .2s ease;
+                transition: background 0.2s ease;
                 border-bottom: 0.1em solid $shadow;
                 &:hover {
                     background: $shadow;

@@ -1,7 +1,8 @@
 @import "colors";
 
-header {
+.header {
     position: fixed;
+    z-index: 5;
     width: 100%;
     top: 0;
     left: 0;
@@ -10,7 +11,7 @@ header {
     backdrop-filter: saturate(180%) blur(5px);
     transform: translateY(-100%);
     border-bottom: 0.1em solid $shadow;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
     &.on-top {
         transform: translateY(0);
     }
@@ -35,6 +36,12 @@ header {
             flex-direction: row;
             align-items: center;
             gap: 1em;
+            button {
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
             button.social-media-button {
                 display: block;
                 background: none;
@@ -61,7 +68,7 @@ header {
                 img {
                     width: 2.5em;
                     position: absolute;
-                    transition: transform .2s ease;
+                    transition: transform 0.2s ease;
                 }
                 &.en-selected {
                     img.en-img {
@@ -85,7 +92,10 @@ header {
 }
 
 @media screen and (max-width: 48em) {
-    header div.header-container section.menu-container button.social-media-button {
+    .header
+        div.header-container
+        section.menu-container
+        button.social-media-button {
         display: none;
     }
 }

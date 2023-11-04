@@ -1,6 +1,6 @@
 @import "colors";
 
-footer {
+.footer {
     padding: 2em;
     background: $white;
     border-top: 0.1em solid $shadow;
@@ -8,7 +8,7 @@ footer {
         text-align: center;
         color: $gray;
     }
-    section.social-media-buttons {
+    .social-buttons {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -22,12 +22,11 @@ footer {
             svg {
                 display: block;
                 height: 2em;
-            }
-            &.github svg {
                 fill: $black;
-            }
-            &.youtube svg {
-                fill: $red;
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }

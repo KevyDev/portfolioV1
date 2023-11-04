@@ -1,0 +1,25 @@
+@import "colors";
+
+.loader {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    img {
+        width: auto;
+        max-height: 4rem;
+    }
+    h6 {
+        text-align: center;
+        color: $red;
+    }
+}

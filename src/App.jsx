@@ -1,14 +1,15 @@
 import { Component } from "react"
 import { BrowserRouter } from "react-router-dom"
-import "./style/app.scss"
-import "./style/section.scss"
+import Footer from "./Footer"
 import Header from "./Header"
-import Traits from "./Traits"
+import Loader from "./Loader"
 import Section from "./Section"
 import Skills from "./Skills"
-import Footer from "./Footer"
+import Traits from "./Traits"
+import "./style/App.scss"
+import "./style/Section.scss"
 
-class App extends Component {
+export default class App extends Component {
 	constructor(props) {
 		super(props)
 
@@ -21,7 +22,8 @@ class App extends Component {
 			skillsData: {},
 			projectsData: {},
 			footerText: {},
-			loaded: false
+			loaded: false,
+			error: false
 		}
 	}
 
@@ -42,9 +44,10 @@ class App extends Component {
 	loadData = async () => {
 		let lang = localStorage.getItem("appLang") || "en",
 			data = await fetch("data.json")
-				.then((response) => response.json())
-				.catch((error) => {
-					throw error;
+				.then(response => response.json())
+				.catch(error => {
+					this.setState({ error: true })
+					throw error
 				});
 		this.setState({
 			lang: ["en", "es"].includes(lang) ? lang : "en",
@@ -52,27 +55,26 @@ class App extends Component {
 			workData: data.workData,
 			skillsData: data.skillsData,
 			projectsData: data.projectsData,
-			footerText: data.footerText,
-			loaded: true
+			footerText: data.footerText
 		})
+		setTimeout(() => this.setState({ loaded: true }), 500)
 	}
 
 	render() {
 		return (
-			<>
-				{this.state.loaded &&
-					<BrowserRouter>
+			<BrowserRouter>
+				{!this.state.loaded && <Loader error={this.state.error} />}
+				{this.state.loaded && (
+					<>
 						<Header headerOnTop={this.state.headerOnTop} lang={this.state.lang} toggleLang={this.toggleLang} />
 						<Traits lang={this.state.lang} data={this.state.traitsData} />
 						<Section lang={this.state.lang} data={this.state.workData} />
 						<Skills lang={this.state.lang} data={this.state.skillsData} />
 						<Section lang={this.state.lang} data={this.state.projectsData} />
 						<Footer footerText={this.state.footerText[this.state.lang]} />
-					</BrowserRouter>
-				}
-			</>
+					</>
+				)}
+			</BrowserRouter>
 		)
 	}
 }
-
-export default App
