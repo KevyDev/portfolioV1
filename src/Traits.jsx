@@ -1,6 +1,6 @@
-import "./style/traits.scss"
+import "./style/Traits.scss"
 
-function Traits({ lang, data }) {
+export default function Traits({ lang, data }) {
     return (
         <section className="section-container traits-container">
             <div>
@@ -16,5 +16,3 @@ function Traits({ lang, data }) {
         </section>
     )
 }
-
-export default Traits

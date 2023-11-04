@@ -1,6 +1,6 @@
-import "./style/skills.scss"
+import "./style/Skills.scss"
 
-function Skills({ lang, data }) {
+export default function Skills({ lang, data }) {
     return (
         <section className="section-container skills-container">
             <div>
@@ -21,5 +21,3 @@ function Skills({ lang, data }) {
         </section >
     )
 }
-
-export default Skills

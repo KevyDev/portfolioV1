@@ -12,8 +12,9 @@
                 "My motto is: simple, modern, functional, scalable and fast.",
                 "Native Spanish speaker",
                 "Non-native English speaker",
-                "Gold medal in Provincial Programming Contest",
-                "Participant in National Programming Contest"
+                "Gold medal in 2023 Provincial Programming Contest",
+                "Participant in 2023 National Programming Contest",
+                "Participant in the 2023 ICPC Caribbean Finals Qualifier"
             ],
             "es": [
                 "Mi nombre es Kevin Gorrín.",
@@ -22,8 +23,9 @@
                 "Mi lema es: simple, moderno, funcional, escalable y rápido.",
                 "Hispanohablante nativo",
                 "Angloparlante no nativo",
-                "Medalla de oro en Concurso Provincial de Programación",
-                "Participante en Concurso Nacional de Programación"
+                "Medalla de oro en Concurso Provincial de Programación 2023",
+                "Participante en Concurso Nacional de Programación 2023",
+                "Participante en el Clasificatorio a las Finales del Caribe del ICPC 2023"
             ]
         }
     },
@@ -33,17 +35,6 @@
             "es": "Experiencia laboral"
         },
         "list": [
-            {
-                "name": "KevyDev YouTube Channel",
-                "description": {
-                    "en": "I upload videos about programming on my YouTube channel. (2023-)",
-                    "es": "Subo videos sobre programación en mi canal de YouTube. (2023-)"
-                },
-                "ytLink": "https://www.youtube.com/@KevyDev",
-                "tags": [
-                    "Code"
-                ]
-            }
         ]
     },
     "skillsData": {

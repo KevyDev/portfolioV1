@@ -26,14 +26,14 @@ section.projects-works-container {
             width: 100%;
             border: 0.1em solid $shadow;
             h5.description {
-                margin-top: .5em;
+                margin-top: 0.5em;
                 color: $gray;
             }
             ul.tags {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: .5em;
+                gap: 0.5em;
                 margin: 1em 0em;
                 li {
                     font-size: 1em;
@@ -43,7 +43,7 @@ section.projects-works-container {
             ol.links-buttons {
                 display: flex;
                 flex-direction: row;
-                gap: .5em;
+                gap: 0.5em;
                 a {
                     button {
                         display: block;
@@ -53,6 +53,10 @@ section.projects-works-container {
                             display: block;
                             fill: $green;
                             height: 2em;
+                            transition: transform 0.2s ease;
+                            &:hover {
+                                transform: scale(1.1);
+                            }
                         }
                         &.github svg {
                             fill: $black;
