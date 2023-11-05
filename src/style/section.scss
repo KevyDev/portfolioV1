@@ -36,13 +36,24 @@ section.projects-works-container {
                 gap: 0.5em;
                 margin: 1em 0em;
                 li {
-                    font-size: 1em;
-                    color: $blue;
+                    font-size: 1.2em;
+                    padding: 1em;
+                    border-radius: 1em;
+                    transition: background 0.2s ease;
+                    border-bottom: 0.1em solid $shadow;
+                    &:hover {
+                        background: $shadow;
+                    }
+                    img.skill-img {
+                        display: block;
+                        height: 1.5em;
+                    }
                 }
             }
             ol.links-buttons {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 gap: 0.5em;
                 a {
                     button {
