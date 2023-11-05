@@ -120,6 +120,23 @@ body {
     line-height: 1;
     font-size: 16px;
     background-color: $background;
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $green;
+        border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $green;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: $green;
+    }
 }
 
 ol,

@@ -11,7 +11,7 @@ export default function Section({ lang, data }) {
                         <article key={"project-" + i}>
                             <h3 className="name">{element.name}</h3>
                             <h5 className="description">{element.description[lang]}</h5>
-                            <ul className="tags">{element.tags.map((tag, o) => <li key={"pw-" + i + "-" + o}>{"#" + tag}</li>)}</ul>
+                            <ul className="tags">{element.tags.map((tag, o) => <li key={"pw-" + i + "-" + o}><img className="skill-img" src={"skills/" + tag + ".png"} /></li>)}</ul>
                             <ol className="links-buttons">
                                 {element.ghLink &&
                                     <Link target="_blank" to={element.ghLink}>
