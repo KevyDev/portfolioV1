@@ -16,12 +16,10 @@ export default class App extends Component {
 		this.state = {
 			lastYOffset: 0,
 			headerOnTop: true,
-			lang: "en",
-			traitsData: {},
+			goalsData: [],
 			workData: {},
 			skillsData: {},
 			projectsData: {},
-			footerText: {},
 			loaded: false,
 			error: false
 		}
@@ -29,33 +27,20 @@ export default class App extends Component {
 
 	componentDidMount() {
 		this.loadData()
-		window.addEventListener("scroll", e => this.setState({
-			lastYOffset: e.currentTarget.pageYOffset,
-			headerOnTop: e.currentTarget.pageYOffset < 50 || e.currentTarget.pageYOffset < this.state.lastYOffset
-		}))
-	}
-
-	toggleLang = () => {
-		let newLang = this.state.lang == "en" ? "es" : "en"
-		localStorage.setItem("appLang", newLang)
-		this.setState({ lang: newLang })
 	}
 
 	loadData = async () => {
-		let lang = localStorage.getItem("appLang") || "en",
-			data = await fetch("data.json")
-				.then(response => response.json())
-				.catch(error => {
-					this.setState({ error: true })
-					throw error
-				});
+		let data = await fetch("data.json")
+			.then(response => response.json())
+			.catch(error => {
+				this.setState({ error: true })
+				throw error
+			})
 		this.setState({
-			lang: ["en", "es"].includes(lang) ? lang : "en",
-			traitsData: data.traitsData,
-			workData: data.workData,
+			goalsData: data.goalsData.reverse(),
+			workData: data.workData.reverse(),
 			skillsData: data.skillsData,
-			projectsData: data.projectsData,
-			footerText: data.footerText
+			projectsData: data.projectsData.reverse()
 		})
 		setTimeout(() => this.setState({ loaded: true }), 500)
 	}
@@ -66,12 +51,12 @@ export default class App extends Component {
 				{!this.state.loaded && <Loader error={this.state.error} />}
 				{this.state.loaded && (
 					<>
-						<Header headerOnTop={this.state.headerOnTop} lang={this.state.lang} toggleLang={this.toggleLang} />
-						<Traits lang={this.state.lang} data={this.state.traitsData} />
-						<Section lang={this.state.lang} data={this.state.workData} />
-						<Skills lang={this.state.lang} data={this.state.skillsData} />
-						<Section lang={this.state.lang} data={this.state.projectsData} />
-						<Footer footerText={this.state.footerText[this.state.lang]} />
+						<Header />
+						<Traits goals={this.state.goalsData} />
+						<Section title="Experience" data={this.state.workData} />
+						<Skills data={this.state.skillsData} />
+						<Section title="Projects" data={this.state.projectsData} />
+						<Footer />
 					</>
 				)}
 			</BrowserRouter>
