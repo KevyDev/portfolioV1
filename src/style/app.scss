@@ -31,7 +31,7 @@ cite,
 code,
 del,
 dfn,
-em,
+rem,
 img,
 ins,
 kbd,
@@ -72,7 +72,7 @@ article,
 aside,
 canvas,
 details,
-embed,
+rembed,
 figure,
 figcaption,
 footer,
@@ -114,11 +114,11 @@ section {
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1;
 }
 
 body {
-    line-height: 1;
-    font-size: 16px;
     background-color: $background;
     &::-webkit-scrollbar {
         width: 0.5rem;
@@ -157,30 +157,41 @@ h4,
 h5,
 h6 {
     color: $black;
+    font-weight: normal;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2rem;
+    line-height: 2rem;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
 }
 
 h3 {
-    font-size: 1.6em;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
 }
 
 h4 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
 }
 
 h5 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
 h6 {
-    font-size: 1em;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 blockquote,
@@ -206,13 +217,13 @@ textarea {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
+    html {
         font-size: 14px;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    body {
+    html {
         font-size: 12px;
     }
 }

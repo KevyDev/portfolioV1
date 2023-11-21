@@ -1,80 +1,83 @@
 @import "colors";
 
-section.section-container {
+.section {
     width: 100%;
-    & > div {
+    .section-container {
         width: 90%;
-        max-width: 64em;
+        max-width: 64rem;
         margin: auto;
-        padding: 3em 1em;
-        h1 {
-            margin-bottom: 1em;
+        padding: 3rem 1rem;
+        .title {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            span {
+                color: $green;
+            }
+        }
+        .nothing {
+            color: $gray;
         }
     }
 }
 
-section.projects-works-container {
-    ol.list {
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-        gap: 1em;
-        align-items: start;
-        article {
-            background: $white;
-            padding: 2em;
-            border-radius: 1em;
-            width: 100%;
-            border: 0.1em solid $shadow;
-            h5.description {
-                margin-top: 0.5em;
-                color: $gray;
+.projects-works-container .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+    article {
+        background: $white;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 100%;
+        border: 0.1rem solid $shadow;
+        .name {
+            font-weight: bold;
+        }
+        .description {
+            margin-top: 0.5rem;
+            color: $gray;
+        }
+        ul.tags {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            li {
+                img.skill-img {
+                    display: block;
+                    height: 1.5rem;
+                }
             }
-            ul.tags {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 0.5em;
-                margin: 1em 0em;
-                li {
-                    font-size: 1.2em;
-                    padding: 1em;
-                    border-radius: 1em;
+        }
+        &:hover .link-button {
+            opacity: 1;
+        }
+        .link-button {
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            a {
+                right: 0;
+                top: 0;
+                transform: translate(25%, -25%);
+                position: absolute;
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    padding: 1rem;
+                    border-radius: 1rem;
                     transition: background 0.2s ease;
-                    border-bottom: 0.1em solid $shadow;
                     &:hover {
-                        background: $shadow;
+                        background: $background;
                     }
-                    img.skill-img {
-                        display: block;
-                        height: 1.5em;
-                    }
-                }
-            }
-            ol.links-buttons {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 0.5em;
-                a {
-                    button {
-                        display: block;
-                        cursor: pointer;
-                        background: none;
-                        svg {
-                            display: block;
-                            fill: $green;
-                            height: 2em;
-                            transition: transform 0.2s ease;
-                            &:hover {
-                                transform: scale(1.1);
-                            }
-                        }
-                        &.github svg {
-                            fill: $black;
-                        }
-                        &.youtube svg {
-                            fill: $red;
-                        }
+                    cursor: pointer;
+                    svg {
+                        fill: $green;
+                        height: 1rem;
                     }
                 }
             }
@@ -82,14 +85,17 @@ section.projects-works-container {
     }
 }
 
-@media screen and (max-width: 64em) {
-    section.projects-works-container ol.list {
-        grid-template-columns: repeat(2, 50%);
+@media screen and (max-width: 72rem) {
+    section.projects-works-container .list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 48em) {
-    section.projects-works-container ol.list {
+@media screen and (max-width: 48rem) {
+    section.projects-works-container .list {
         grid-template-columns: 100%;
+        article .link-button {
+            opacity: 1;
+        }
     }
 }

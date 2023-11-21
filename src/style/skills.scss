@@ -1,32 +1,37 @@
 @import "colors";
 
-section.skills-container {
+.skills-container {
     background: $white;
-    border-top: 0.1em solid $shadow;
-    border-bottom: 0.1em solid $shadow;
-    ol.skills-list {
+    border-top: 0.1rem solid $shadow;
+    border-bottom: 0.1rem solid $shadow;
+    .skills-groups-list {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 2rem;
+        .subtitle {
+            font-weight: bold;
+        }
         ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 1em;
+            gap: 1rem;
+            padding-top: 0.5rem;
             li {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap: 0.5em;
-                padding: 1em;
-                border-radius: 1em;
+                gap: 0.5rem;
+                padding: 1rem;
+                border-radius: 1rem;
+                background: $white;
                 transition: background 0.2s ease;
-                border-bottom: 0.1em solid $shadow;
+                border-bottom: 0.1rem solid $shadow;
                 &:hover {
                     background: $shadow;
                 }
-                img.skill-img {
+                .skill-img {
                     display: block;
-                    height: 3em;
+                    height: 2rem;
                 }
             }
         }
