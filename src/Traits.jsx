@@ -12,7 +12,7 @@ export default function Traits({ goals }) {
                         <h5 className="motto">My motto is: simple, modern, functional, scalable and fast.</h5>
                     </div>
                     <div className="photo-container">
-                        <img src="/kevydev-logo.jpg" alt="KevyDev Photo" />
+                        <img src="kevydev-logo.jpg" alt="KevyDev Photo" />
                     </div>
                 </div>
                 <ul className="goals">
