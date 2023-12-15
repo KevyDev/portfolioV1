@@ -36,7 +36,7 @@
     "projectsData": [
         {
             "name": "KevyDev Portfolio V1",
-            "description": "I made my own portfolio.",
+            "description": "My own portfolio.",
             "ghLink": "KevyDev/portfolioV1",
             "link": "https://kevydev.github.io/portfolio/",
             "skills": [
@@ -52,7 +52,7 @@
         },
         {
             "name": "OX Game",
-            "description": "I made the famous game of tic tac toe.",
+            "description": "The famous game of tic tac toe.",
             "ghLink": "KevyDev/OXGame",
             "link": "https://kevydev.github.io/OXGame/",
             "skills": [
@@ -68,7 +68,7 @@
         },
         {
             "name": "MyShoppy V1",
-            "description": "I made my first virtual shop using React and a public API (fakestoreapi.com).",
+            "description": "My first virtual shop using React and a public API (fakestoreapi.com).",
             "ghLink": "KevyDev/MyShoppyV1",
             "link": "https://kevydev.github.io/MyShoppyV1/",
             "skills": [
