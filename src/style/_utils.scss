@@ -1,0 +1,75 @@
+$headerBg: rgba(255, 255, 255, 0.8);
+$white: #fff;
+$black: #111;
+$green: #009500;
+$greenTransparent: #0095003d;
+$greenLight: #02aa02;
+$blue: #07f;
+$red: #f00;
+$yellow: #ffff00;
+$gray: #666;
+$shadow: #ddd;
+$background: #eee;
+
+$maxWidth: 80rem;
+
+@mixin hoverElement() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background: $white;
+    transition: background 0.2s ease;
+    border-bottom: 0.1rem solid $shadow;
+    &:hover {
+        background: $shadow;
+    }
+    img {
+        display: block;
+        height: 1.5rem;
+    }
+}
+
+@mixin button() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background: $green;
+    color: $white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 1.2rem;
+    &:hover {
+        background: $greenLight;
+    }
+    &.contact {
+        color: $green;
+        background: $white;
+        border: 0.1rem solid $green;
+        &:hover {
+            background: $background;
+        }
+    }
+    &.see-code {
+        background: $black;
+        p {
+            color: $white;
+        }
+        svg {
+            fill: $white;
+        }
+        &:hover {
+            background: $gray;
+        }
+    }
+    svg {
+        height: 1.5rem;
+    }
+}

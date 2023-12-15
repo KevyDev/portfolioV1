@@ -53,9 +53,9 @@ export default class App extends Component {
 					<>
 						<Header />
 						<Traits goals={this.state.goalsData} />
-						<Section title="Experience" data={this.state.workData} />
-						<Skills data={this.state.skillsData} />
 						<Section title="Projects" data={this.state.projectsData} />
+						<Skills data={this.state.skillsData} />
+						<Section title="Experience" data={this.state.workData} />
 						<Footer />
 					</>
 				)}

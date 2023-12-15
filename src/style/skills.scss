@@ -1,38 +1,26 @@
-@import "colors";
+@import "utils";
 
 .skills-container {
     background: $white;
     border-top: 0.1rem solid $shadow;
     border-bottom: 0.1rem solid $shadow;
+    .bio {
+        padding-bottom: 1rem;
+    }
     .skills-groups-list {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         .subtitle {
             font-weight: bold;
         }
         ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.5rem;
             padding-top: 0.5rem;
             li {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 0.5rem;
-                padding: 1rem;
-                border-radius: 1rem;
-                background: $white;
-                transition: background 0.2s ease;
-                border-bottom: 0.1rem solid $shadow;
-                &:hover {
-                    background: $shadow;
-                }
-                .skill-img {
-                    display: block;
-                    height: 2rem;
-                }
+                @include hoverElement;
             }
         }
     }

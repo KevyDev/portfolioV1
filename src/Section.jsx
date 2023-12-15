@@ -1,34 +1,43 @@
 import { Link } from "react-router-dom"
-import { SvgArrowUpRight } from "./Icons"
+import { SvgGitHub } from "./Icons"
 
 export default function Section({ title, data }) {
     return (
         <section className="section projects-works-container">
             <div className="section-container">
-                <h1 className="title">{title}</h1>
-                {data.length === 0 && <h5 className="nothing">Nothing yet :(</h5>}
+                <h2 className="title">{title}</h2>
+                {data.length === 0 && <h5 className="nothing">I still don't have work experience, but meanwhile <b>I'm developing personal projects :)</b></h5>}
                 {data.length > 0 &&
                     <ol className="list">
                         {data.map((element, i) =>
                             <article key={"project-" + i}>
-                                {element.link &&
-                                    <div className="link-button">
-                                        <Link target="_blank" to={element.link}>
-                                            <button>
-                                                <SvgArrowUpRight />
-                                            </button>
-                                        </Link>
+                                {element.preview &&
+                                    <div className="preview-container">
+                                        <img src={"previews/" + element.preview} alt={element.name + " preview."} loading="lazy" />
                                     </div>
                                 }
-                                <h3 className="name">{element.name}</h3>
-                                <h5 className="description">{element.description}</h5>
-                                <ul className="tags">{
-                                    element.tags.map((tag, o) =>
+                                <h4 className="name">{element.name}</h4>
+                                <p className="description">{element.description}</p>
+                                <ul className="skills">{
+                                    element.skills.map((skill, o) =>
                                         <li key={"pw-" + i + "-" + o}>
-                                            <img className="skill-img" src={"skills/" + tag + ".png"} />
+                                            <img className="skill-img" src={"skills/" + skill + ".png"} loading="lazy" />
                                         </li>
                                     )}
                                 </ul>
+                                {element.link &&
+                                    <Link target="_blank" to={element.link}>
+                                        <button className="take-a-look">Take a look</button>
+                                    </Link>
+                                }
+                                {element.ghLink &&
+                                    <Link target="_blank" to={"https://github.com/" + element.ghLink}>
+                                        <button className="see-code">
+                                            <SvgGitHub />
+                                            <p>See code</p>
+                                        </button>
+                                    </Link>
+                                }
                             </article>
                         )}
                     </ol>

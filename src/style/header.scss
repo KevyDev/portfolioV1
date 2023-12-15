@@ -1,8 +1,9 @@
-@import "colors";
+@import "utils";
 
 .header {
     width: 100%;
     position: sticky;
+    z-index: 10;
     top: 0;
     left: 0;
     right: 0;
@@ -11,12 +12,12 @@
     border-bottom: 0.1rem solid $shadow;
     .header-container {
         width: 90%;
-        max-width: 64rem;
+        max-width: $maxWidth;
         margin: 0 auto;
         padding: 1rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 1rem;
         .logotype-container {
             height: 2rem;
@@ -24,36 +25,6 @@
                 display: block;
                 width: auto;
                 height: 100%;
-            }
-        }
-    }
-    .social-buttons {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        gap: 1rem;
-        a {
-            button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 3rem;
-                height: 3rem;
-                border-radius: 1rem;
-                background: $white;
-                cursor: pointer;
-                transition: background 0.2s ease;
-                border-bottom: 0.1rem solid $shadow;
-                &:hover {
-                    background: $background;
-                }
-                svg {
-                    height: 2rem;
-                    fill: $black;
-                }
-                &.linkedin svg {
-                    fill: $blue;
-                }
             }
         }
     }

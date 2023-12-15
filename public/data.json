@@ -37,9 +37,9 @@
         {
             "name": "KevyDev Portfolio V1",
             "description": "I made my own portfolio.",
-            "ghLink": "https://github.com/KevyDev/portfolioV1",
+            "ghLink": "KevyDev/portfolioV1",
             "link": "https://kevydev.github.io/portfolio/",
-            "tags": [
+            "skills": [
                 "HTML",
                 "CSS",
                 "Javascript",
@@ -47,14 +47,15 @@
                 "Sass",
                 "Git",
                 "GitHub"
-            ]
+            ],
+            "preview": "portfoliov1.jpg"
         },
         {
             "name": "OX Game",
             "description": "I made the famous game of tic tac toe.",
-            "ghLink": "https://github.com/KevyDev/OXGame",
+            "ghLink": "KevyDev/OXGame",
             "link": "https://kevydev.github.io/OXGame/",
-            "tags": [
+            "skills": [
                 "HTML",
                 "CSS",
                 "Javascript",
@@ -62,14 +63,15 @@
                 "Sass",
                 "Git",
                 "GitHub"
-            ]
+            ],
+            "preview": "oxgame.jpg"
         },
         {
             "name": "MyShoppy V1",
             "description": "I made my first virtual shop using React and a public API (fakestoreapi.com).",
-            "ghLink": "https://github.com/KevyDev/MyShoppyV1",
+            "ghLink": "KevyDev/MyShoppyV1",
             "link": "https://kevydev.github.io/MyShoppyV1/",
-            "tags": [
+            "skills": [
                 "HTML",
                 "CSS",
                 "Javascript",
@@ -77,7 +79,8 @@
                 "Sass",
                 "Git",
                 "GitHub"
-            ]
+            ],
+            "preview": "myshoppyv1.jpg"
         }
     ]
 }

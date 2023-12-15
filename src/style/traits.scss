@@ -1,4 +1,4 @@
-@import "colors";
+@import "utils";
 
 .traits-container {
     background: $white;
@@ -6,12 +6,12 @@
     .separator-container {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 14rem;
+        grid-template-columns: 20rem 1fr;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
         .photo-container {
-            width: 14rem;
-            height: 14rem;
+            width: 20rem;
+            height: 20rem;
             img {
                 display: block;
                 width: 100%;
@@ -24,14 +24,46 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            .motto {
-                color: $gray;
-                padding-top: 0.5rem;
-            }
             span,
             .name {
                 color: $green;
                 font-weight: bold;
+                padding-top: 0.5rem;
+            }
+            .motto {
+                color: $gray;
+                padding: 0.5rem 0;
+            }
+            .action-buttons,
+            .social-buttons {
+                display: flex;
+                align-content: center;
+                gap: 0.5rem;
+            }
+            .action-buttons a button {
+                @include button;
+            }
+            .social-buttons a button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 1rem;
+                background: $white;
+                cursor: pointer;
+                transition: background 0.2s ease;
+                border-bottom: 0.1rem solid $shadow;
+                &:hover {
+                    background: $background;
+                }
+                svg {
+                    height: 2rem;
+                    fill: $black;
+                }
+                &.linkedin svg {
+                    fill: $blue;
+                }
             }
         }
     }
@@ -41,28 +73,23 @@
         flex-wrap: wrap;
         gap: 1rem;
         li {
-            padding: 1rem;
-            border-radius: 1rem;
-            background: $white;
-            transition: background 0.2s ease;
-            border-bottom: 0.1rem solid $shadow;
-            &:hover {
-                background: $shadow;
-            }
+            @include hoverElement;
         }
     }
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 64rem) {
     .traits-container .separator-container {
         gap: 1.5rem;
         grid-template-columns: 100%;
         .photo-container {
+            width: 16rem;
+            height: 16rem;
             margin: 0 auto;
         }
     }
     .goals li {
         width: 100%;
-        text-align: center;
+        justify-content: center;
     }
 }
