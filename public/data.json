@@ -36,15 +36,15 @@
     "projectsData": [
         {
             "name": "KevyDev Portfolio V1",
-            "description": "My own portfolio.",
+            "description": "My own portfolio. You are seeing it right now :o",
             "ghLink": "KevyDev/portfolioV1",
-            "link": "https://kevydev.github.io/portfolio/",
             "skills": [
                 "HTML",
                 "CSS",
-                "Javascript",
-                "ReactJS",
                 "Sass",
+                "Javascript",
+                "NodeJS",
+                "ReactJS",
                 "Git",
                 "GitHub"
             ],
@@ -58,9 +58,10 @@
             "skills": [
                 "HTML",
                 "CSS",
-                "Javascript",
-                "ReactJS",
                 "Sass",
+                "Javascript",
+                "NodeJS",
+                "ReactJS",
                 "Git",
                 "GitHub"
             ],
@@ -74,13 +75,31 @@
             "skills": [
                 "HTML",
                 "CSS",
-                "Javascript",
-                "ReactJS",
                 "Sass",
+                "Javascript",
+                "NodeJS",
+                "ReactJS",
                 "Git",
                 "GitHub"
             ],
             "preview": "myshoppyv1.jpg"
+        },
+        {
+            "name": "Snaky Game",
+            "description": "The famous game of the snake eating apples, now with sound effects!",
+            "ghLink": "KevyDev/Snaky",
+            "link": "https://kevydev.github.io/snaky/",
+            "skills": [
+                "HTML",
+                "CSS",
+                "Sass",
+                "Javascript",
+                "NodeJS",
+                "ReactJS",
+                "Git",
+                "GitHub"
+            ],
+            "preview": "snaky.jpg"
         }
     ]
 }
