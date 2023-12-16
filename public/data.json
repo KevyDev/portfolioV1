@@ -36,7 +36,7 @@
     "projectsData": [
         {
             "name": "KevyDev Portfolio V1",
-            "description": "My own portfolio. You are seeing it right now :o",
+            "description": "My own portfolio. You are seeing it right now!",
             "ghLink": "KevyDev/portfolioV1",
             "skills": [
                 "HTML",
@@ -88,7 +88,7 @@
             "name": "Snaky Game",
             "description": "The famous game of the snake eating apples, now with sound effects!",
             "ghLink": "KevyDev/Snaky",
-            "link": "https://kevydev.github.io/snaky/",
+            "link": "https://kevydev.github.io/Snaky/",
             "skills": [
                 "HTML",
                 "CSS",
