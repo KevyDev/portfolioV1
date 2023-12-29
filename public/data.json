@@ -11,7 +11,9 @@
             "HTML",
             "CSS",
             "Sass",
+            "TailwindCSS",
             "Javascript",
+            "Typescript",
             "ReactJS"
         ],
         [
@@ -117,6 +119,24 @@
                 "GitHub"
             ],
             "preview": "passwordgenerator.jpg"
+        },
+        {
+            "name": "2Cards",
+            "description": "Select the pairs and win. That's all!",
+            "ghLink": "KevyDev/2Cards",
+            "link": "https://kevydev.github.io/2Cards/",
+            "skills": [
+                "HTML",
+                "CSS",
+                "TailwindCSS",
+                "Javascript",
+                "Typescript",
+                "NodeJS",
+                "ReactJS",
+                "Git",
+                "GitHub"
+            ],
+            "preview": "2cards.jpg"
         }
     ]
 }
