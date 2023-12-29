@@ -122,7 +122,7 @@
         },
         {
             "name": "2Cards",
-            "description": "Select the pairs and win. That's all! I used a public API (https://rickandmortyapi.com/).",
+            "description": "Select the pairs and win. That's all! I used a public API (rickandmortyapi.com).",
             "ghLink": "KevyDev/2Cards",
             "link": "https://kevydev.github.io/2Cards/",
             "skills": [
