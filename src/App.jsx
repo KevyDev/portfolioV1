@@ -30,7 +30,7 @@ export default class App extends Component {
 	}
 
 	loadData = async () => {
-		let data = await fetch("data.json")
+		let data = await fetch("https://kevydev.github.io/portfolio/data.json")
 			.then(response => response.json())
 			.catch(error => {
 				this.setState({ error: true })

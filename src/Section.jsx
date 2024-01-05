@@ -21,7 +21,7 @@ export default function Section({ title, data }) {
                                 <ul className="skills">{
                                     element.skills.map((skill, o) =>
                                         <li key={"pw-" + i + "-" + o}>
-                                            <img className="skill-img" src={"skills/" + skill + ".png"} loading="lazy" />
+                                            <img className="skill-img" src={"https://kevydev.github.io/portfolio/skills/" + skill + ".png"} loading="lazy" />
                                         </li>
                                     )}
                                 </ul>

@@ -1,7 +1,5 @@
 import "./style/Skills.scss"
 
-let groups = ["Frontend", "Backend", "Programming Languages", "Databases", "Version Control"]
-
 export default function Skills({ data }) {
     return (
         <section className="section skills-container">
@@ -11,11 +9,11 @@ export default function Skills({ data }) {
                 <ol className="skills-groups-list">
                     {data.map((group, i) =>
                         <div className="skills-group" key={"group-" + i}>
-                            <h4 className="subtitle">{groups[i]}</h4>
+                            <h4 className="subtitle">{group[0]}</h4>
                             <ul>
-                                {group.map((skill, o) =>
+                                {group[1].map((skill, o) =>
                                     <li key={"skill-" + o}>
-                                        <img className="skill-img" src={"skills/" + skill + ".png"} loading="lazy" />
+                                        <img className="skill-img" src={"https://kevydev.github.io/portfolio/skills/" + skill + ".png"} loading="lazy" />
                                         <p className="skill-name">{skill}</p>
                                     </li>
                                 )}
