@@ -1,65 +1,42 @@
-import { Component } from "react"
-import { BrowserRouter } from "react-router-dom"
+import { useEffect, useState } from "react"
+import ExperienceSection from "./ExperienceSection"
 import Footer from "./Footer"
 import Header from "./Header"
 import Loader from "./Loader"
-import Section from "./Section"
 import Skills from "./Skills"
-import Traits from "./Traits"
+import Welcome from "./Welcome"
 import "./style/App.scss"
-import "./style/Section.scss"
 
-export default class App extends Component {
-	constructor(props) {
-		super(props)
+export default function App() {
+	let [workData, setWork] = useState({}),
+		[skillsData, setSkills] = useState({}),
+		[projectsData, setProjects] = useState({}),
+		[loaded, setLoaded] = useState(false),
+		[error, setError] = useState(false)
 
-		this.state = {
-			lastYOffset: 0,
-			headerOnTop: true,
-			goalsData: [],
-			workData: {},
-			skillsData: {},
-			projectsData: {},
-			loaded: false,
-			error: false
+	useEffect(() => {
+		const loadData = async () => {
+			let data = await fetch("https://kevydev.github.io/portfolio/data.json")
+				.then(response => response.json())
+				.catch(error => {
+					setError(true)
+					throw error
+				})
+			setWork(data.workData.reverse())
+			setSkills(data.skillsData)
+			setProjects(data.projectsData.reverse())
+			setTimeout(() => setLoaded(true), 500)
 		}
-	}
+		loadData()
+	}, [])
 
-	componentDidMount() {
-		this.loadData()
-	}
-
-	loadData = async () => {
-		let data = await fetch("https://kevydev.github.io/portfolio/data.json")
-			.then(response => response.json())
-			.catch(error => {
-				this.setState({ error: true })
-				throw error
-			})
-		this.setState({
-			goalsData: data.goalsData.reverse(),
-			workData: data.workData.reverse(),
-			skillsData: data.skillsData,
-			projectsData: data.projectsData.reverse()
-		})
-		setTimeout(() => this.setState({ loaded: true }), 500)
-	}
-
-	render() {
-		return (
-			<BrowserRouter>
-				{!this.state.loaded && <Loader error={this.state.error} />}
-				{this.state.loaded && (
-					<>
-						<Header />
-						<Traits goals={this.state.goalsData} />
-						<Section title="Projects" data={this.state.projectsData} />
-						<Skills data={this.state.skillsData} />
-						<Section title="Experience" data={this.state.workData} />
-						<Footer />
-					</>
-				)}
-			</BrowserRouter>
-		)
-	}
+	return !loaded ? <Loader error={error} /> :
+		<>
+			<Header />
+			<Welcome />
+			<ExperienceSection title="Projects" data={projectsData} />
+			<Skills data={skillsData} />
+			<ExperienceSection title="Experience" data={workData} />
+			<Footer />
+		</>
 }

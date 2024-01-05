@@ -5,20 +5,20 @@
     border-top: 0.1rem solid $shadow;
     border-bottom: 0.1rem solid $shadow;
     .bio {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
     }
     .skills-groups-list {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         .subtitle {
             font-weight: bold;
         }
         ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            padding-top: 0.5rem;
+            gap: 1rem;
+            padding-top: 1rem;
             li {
                 @include hoverElement;
             }

@@ -92,8 +92,8 @@ video {
     padding: 0;
     border: 0;
     font-size: inherit;
-    font-family: MADE TOMMY, Cambria, Cochin, Georgia, Times, "Times New Roman",
-        serif;
+    font-family: "MADE TOMMY", "Franklin Gothic Medium", "Arial Narrow", Arial,
+        sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -194,26 +194,24 @@ p {
     font-size: 1.2rem;
 }
 
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-    content: "";
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-textarea {
-    resize: none;
+.section {
+    width: 100%;
+    .section-container {
+        width: 90%;
+        max-width: $maxWidth;
+        margin: auto;
+        padding: 4rem 1rem;
+        .title {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            span {
+                color: $green;
+            }
+        }
+        .nothing {
+            color: $gray;
+        }
+    }
 }
 
 @media only screen and (max-width: 768px) {

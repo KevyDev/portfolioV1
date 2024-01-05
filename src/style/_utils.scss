@@ -1,6 +1,7 @@
 $headerBg: rgba(255, 255, 255, 0.8);
 $white: #fff;
 $black: #111;
+$blackLight: #444;
 $green: #009500;
 $greenTransparent: #0095003d;
 $greenLight: #02aa02;
@@ -66,7 +67,7 @@ $maxWidth: 80rem;
             fill: $white;
         }
         &:hover {
-            background: $gray;
+            background: $blackLight;
         }
     }
     svg {
