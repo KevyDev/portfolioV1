@@ -1,7 +1,7 @@
-import { SvgGitHub, SvgLinkedin } from "./Icons"
+import { SvgGitHub } from "./Icons"
 import "./style/Welcome.scss"
 
-export default function Welcome() {
+export default function Welcome({ goals }) {
     return (
         <section className="section welcome-container">
             <div className="section-container">
@@ -17,25 +17,23 @@ export default function Welcome() {
                             <p className="motto">My motto is: simple, modern, functional, scalable and fast.</p>
                         </div>
                         <div className="buttons-container">
-                            <ul className="action-buttons">
-                                <a target="_blank" href="cv-kevydev.pdf">
-                                    <button className="curriculum">Download CV</button>
-                                </a>
-                                <a href="mailto:kevydev@outlook.com">
-                                    <button className="contact">{"<Contact />"}</button>
-                                </a>
-                            </ul>
-                            <ul className="social-buttons">
-                                <a target="_blank" href="https://github.com/KevyDev">
-                                    <button className="github"><SvgGitHub /></button>
-                                </a>
-                                <a target="_blank" href="https://www.linkedin.com/in/kevydev/">
-                                    <button className="linkedin"><SvgLinkedin /></button>
-                                </a>
-                            </ul>
+                            <a target="_blank" href="cv-kevydev.pdf">
+                                <button className="curriculum">Download CV</button>
+                            </a>
+                            <a href="mailto:kevydev@outlook.com">
+                                <button className="contact">{"<Contact />"}</button>
+                            </a>
+                            <a target="_blank" href="https://github.com/KevyDev">
+                                <button className="github"><SvgGitHub /></button>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <ul className="goals-list">
+                    {goals.map((goal, o) =>
+                        <li key={"goal-" + o}>{goal}</li>
+                    )}
+                </ul>
             </div>
         </section>
     )

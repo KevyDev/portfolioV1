@@ -8,7 +8,8 @@ import Welcome from "./Welcome"
 import "./style/App.scss"
 
 export default function App() {
-	let [workData, setWork] = useState({}),
+	let [goalsData, setGoals] = useState([]),
+		[workData, setWork] = useState({}),
 		[skillsData, setSkills] = useState({}),
 		[projectsData, setProjects] = useState({}),
 		[loaded, setLoaded] = useState(false),
@@ -22,6 +23,7 @@ export default function App() {
 					setError(true)
 					throw error
 				})
+			setGoals(data.goalsData.reverse())
 			setWork(data.workData.reverse())
 			setSkills(data.skillsData)
 			setProjects(data.projectsData.reverse())
@@ -33,7 +35,7 @@ export default function App() {
 	return !loaded ? <Loader error={error} /> :
 		<>
 			<Header />
-			<Welcome />
+			<Welcome goals={goalsData} />
 			<ExperienceSection title="Projects" data={projectsData} />
 			<Skills data={skillsData} />
 			<ExperienceSection title="Experience" data={workData} />

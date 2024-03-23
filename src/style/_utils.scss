@@ -21,8 +21,8 @@ $maxWidth: 80rem;
     gap: 0.5rem;
     min-height: 3rem;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    background: $white;
+    border-radius: 0.5rem;
+    background: $background;
     transition: background 0.2s ease;
     border-bottom: 0.1rem solid $shadow;
     &:hover {
@@ -41,7 +41,7 @@ $maxWidth: 80rem;
     gap: 0.5rem;
     padding: 0 2rem;
     height: 3rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background: $green;
     color: $white;
     cursor: pointer;
@@ -58,7 +58,8 @@ $maxWidth: 80rem;
             background: $background;
         }
     }
-    &.see-code {
+    &.see-code,
+    &.github {
         background: $black;
         p {
             color: $white;
