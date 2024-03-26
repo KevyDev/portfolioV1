@@ -14,7 +14,7 @@
         height: 100%;
         border: 0.1rem solid $shadow;
         display: grid;
-        grid-template-rows: auto 1fr 3rem;
+        grid-template-rows: auto 1fr auto;
         gap: 1rem;
         .preview-container {
             width: 100%;
@@ -50,7 +50,7 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: 0.5rem;
-                padding-top: 0.5rem;
+                margin-top: 0.5rem;
                 li .skill-img {
                     display: block;
                     height: 1.5rem;
@@ -61,16 +61,12 @@
             width: 100%;
             &.both {
                 display: grid;
-                grid-template-columns: 1fr 5rem;
+                grid-template-columns: 1fr auto;
                 gap: 1rem;
             }
             a {
+                @include button;
                 width: 100%;
-                button {
-                    @include button;
-                    width: 100%;
-                    padding: 0;
-                }
             }
         }
     }

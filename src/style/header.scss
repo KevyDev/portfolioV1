@@ -11,9 +11,8 @@
     backdrop-filter: saturate(180%) blur(5px);
     border-bottom: 0.1rem solid $shadow;
     .header-container {
-        width: 90%;
+        width: 100%;
         max-width: $maxWidth;
-        margin: 0 auto;
         padding: 1rem;
         display: flex;
         align-items: center;

@@ -5,7 +5,10 @@ export default function Header() {
         <header className="header">
             <div className="header-container">
                 <div className="logotype-container">
-                    <img src="kevydev-logotype.png" alt="KevyDev logotype" />
+                    <img
+                        src="kevydev-logotype.png"
+                        alt="KevyDev logotype"
+                    />
                 </div>
             </div>
         </header>

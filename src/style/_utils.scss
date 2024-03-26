@@ -19,10 +19,10 @@ $maxWidth: 80rem;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    min-height: 3rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     background: $background;
+    text-align: center;
     transition: background 0.2s ease;
     border-bottom: 0.1rem solid $shadow;
     &:hover {
@@ -39,21 +39,20 @@ $maxWidth: 80rem;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0 2rem;
-    height: 3rem;
+    padding: 1rem 2rem;
     border-radius: 0.5rem;
     background: $green;
     color: $white;
     cursor: pointer;
     transition: background 0.2s ease;
-    font-size: 1.2rem;
+    border: 0.1rem solid;
+    border-color: $green;
     &:hover {
         background: $greenLight;
     }
     &.contact {
         color: $green;
         background: $white;
-        border: 0.1rem solid $green;
         &:hover {
             background: $background;
         }
@@ -61,6 +60,7 @@ $maxWidth: 80rem;
     &.see-code,
     &.github {
         background: $black;
+        border-color: $black;
         p {
             color: $white;
         }

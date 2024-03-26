@@ -13,7 +13,12 @@ export default function Skills({ data }) {
                             <ul>
                                 {group[1].map((skill, o) =>
                                     <li key={"skill-" + o}>
-                                        <img className="skill-img" src={"https://kevydev.github.io/portfolio/skills/" + skill.replace("#", "%23") + ".png"} loading="lazy" />
+                                        <img
+                                            className="skill-img"
+                                            src={"https://kevydev.github.io/portfolio/skills/" + skill.replace("#", "%23") + ".png"}
+                                            alt={skill}
+                                            loading="lazy"
+                                        />
                                         <p className="skill-name">{skill}</p>
                                     </li>
                                 )}

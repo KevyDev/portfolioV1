@@ -34,7 +34,7 @@
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    gap: 1rem;
+                    gap: 0.5rem;
                     span,
                     .name {
                         color: $green;
@@ -42,6 +42,7 @@
                     }
                     .motto {
                         color: $gray;
+                        margin-top: 0.5rem;
                     }
                 }
                 .buttons-container {
@@ -49,7 +50,7 @@
                     align-content: center;
                     flex-wrap: wrap;
                     gap: 1rem;
-                    a button {
+                    a {
                         @include button;
                     }
                 }
@@ -68,22 +69,20 @@
 }
 
 @media screen and (max-width: 64rem) {
-    .welcome-container {
-        .section-container {
-            .separator-container {
-                grid-template-columns: 100%;
-                .photo-container {
-                    width: 16rem;
-                    height: 16rem;
-                    margin: 0 auto;
-                }
-                .info-buttons-container {
-                    padding: 0;
-                }
+    .welcome-container .section-container {
+        .separator-container {
+            grid-template-columns: 100%;
+            .photo-container {
+                width: 16rem;
+                height: 16rem;
+                margin: 0 auto;
             }
-            .goals-list li {
-                width: 100%;
+            .info-buttons-container {
+                padding: 0;
             }
+        }
+        .goals-list li {
+            width: 100%;
         }
     }
 }

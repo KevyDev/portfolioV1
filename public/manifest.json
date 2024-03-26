@@ -1,14 +1,14 @@
 {
   "short_name": "KevyDev",
-  "name": "KevyDev | Fullstack Developer",
+  "name": "KevyDev | Full-Stack Developer",
   "icons": [
     {
       "src": "kevydev-logo.jpg",
       "type": "image/jpg",
-      "sizes": "240x240"
+      "sizes": "1024x1024"
     }
   ],
-  "start_url": ".",
+  "start_url": "/portfolio/",
   "display": "standalone",
   "theme_color": "#009500",
   "background_color": "#eee"

@@ -161,46 +161,39 @@ h6 {
 }
 
 h1 {
-    font-size: 2.4rem;
-    line-height: 2rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
-    line-height: 1.8rem;
+    font-size: 2.25rem;
 }
 
 h3 {
-    font-size: 1.8rem;
-    line-height: 1.6rem;
+    font-size: 2rem;
 }
 
 h4 {
-    font-size: 1.4rem;
-    line-height: 1.4rem;
+    font-size: 1.75rem;
 }
 
 h5 {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.5rem;
 }
 
-h6 {
-    font-size: 1rem;
-    line-height: 1.2rem;
-}
-
-p {
-    font-size: 1.2rem;
+h6,
+p,
+li,
+a {
+    font-size: 1.25rem;
 }
 
 .section {
     width: 100%;
     .section-container {
         width: 90%;
+        margin-inline: auto;
         max-width: $maxWidth;
-        margin: auto;
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
         .title {
             margin-bottom: 1rem;
             font-weight: bold;

@@ -36,9 +36,9 @@ export default function App() {
 		<>
 			<Header />
 			<Welcome goals={goalsData} />
-			<ExperienceSection title="Projects" data={projectsData} />
+			<ExperienceSection areProjects={true} data={projectsData} />
 			<Skills data={skillsData} />
-			<ExperienceSection title="Experience" data={workData} />
+			<ExperienceSection data={workData} />
 			<Footer />
 		</>
 }
