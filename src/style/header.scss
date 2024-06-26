@@ -13,6 +13,7 @@
     .header-container {
         width: 100%;
         max-width: $maxWidth;
+        margin-inline: auto;
         padding: 1rem;
         display: flex;
         align-items: center;
